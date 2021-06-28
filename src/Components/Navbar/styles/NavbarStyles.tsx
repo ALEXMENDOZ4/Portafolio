@@ -68,7 +68,7 @@ export const NavMenu = styled.ul<Data>`
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: ${x => (x.click ? 0 : "-100%")};
+    left: ${c => (c.click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5 ease;
     background: ${VariableColors.colorBlack};
