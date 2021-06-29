@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FaMagento } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Container, VariableColors } from "../../../GlobalStyles";
-import  { Data } from "../../../Interfaces/Interfaces";
+import  { DataMenu } from "../../../Interfaces/Interfaces";
 
 export const Nav = styled.nav`
   background-color: ${VariableColors.bgBlack};
@@ -55,7 +55,7 @@ export const MobileIcon = styled.div`
   }
 `;
 
-export const NavMenu = styled.ul<Data>` 
+export const NavMenu = styled.ul<DataMenu>` 
   display: flex;
   align-items: center;
   list-style: none;
@@ -70,7 +70,7 @@ export const NavMenu = styled.ul<Data>`
     top: 80px;
     left: ${c => (c.click ? 0 : "-100%")};
     opacity: 1;
-    transition: all 0.5 ease;
+    transition: all .6s ease;
     background: ${VariableColors.colorBlack};
   }
 `;
@@ -115,3 +115,26 @@ export const NavLinks = styled(Link)`
   }
 
 `;
+
+export const NavItemBtn = styled.li`
+  @media screen and (max-width: 960px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+  }
+`;
+
+
+export const NavBtnLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 16px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+`
